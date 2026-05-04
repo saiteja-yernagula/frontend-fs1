@@ -1,0 +1,48 @@
+html - hypertext markup language
+it is a markup language that is used to create strucute for an webpage
+invented by tim berners lee in 1991
+it acts as a skeleton
+it contains series of elements that are represente by tags
+
+
+<resword>content</resword>      element ---opentag + contennt + closing tag
+
+container or pair tags
+<h1>some content</h1>
+
+
+empty tags or void tags 
+<img />
+
+
+basic structure of html
+<!DOCTYPE html>---declartion ---it defines type of doc and version
+<html>
+<head>
+<title>first webpage </title>
+</head>---to define title, meta and third party links
+<body>
+
+headings
+ <h1>heading</h1>
+  <h2>heading</h2>
+  <h3>heading</h3>
+  <h4>heading</h4>
+  <h5>heading</h5>
+  <h6>heading</h6>
+
+  paragraph
+  <p>some para content </p>
+
+  images
+  //absolute
+  <img src='https://www.shutterstock.com/image-photo/sun-sets-behind-mountain-ranges-600nw-2479236003.jpg'>
+//relative url
+  <img src='img1.webp'>
+
+  attributes 
+  attributes provides extra information about an tag
+  and controls the behaviour which comes is key value pairs
+</body>---content
+</html>----root element 
+
