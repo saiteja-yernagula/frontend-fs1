@@ -6,9 +6,17 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Home</h1>
+
+    <h1>
+        <a href="#h">home</a>
+        <a href="#cl">classrooms</a>
+        <a href="#cr">courses</a>
+        <a href="#r">register</a>
+        <a href="#c">contact</a>
+    </h1>
+    <h1 id="h">Home</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex
+      Lorem ipsum <span style="color:yellow"> dolor sit amet</span>, consectetur adipisicing elit. Ex
       exercitationem earum nostrum! Eum debitis laudantium, cum fuga veniam
       corrupti voluptate? Nostrum beatae minima veniam alias possimus dicta
       fuga, sed commodi?
@@ -20,12 +28,15 @@
       fuga, sed commodi?
     </p>
 
-    <h1>our classrooms</h1>
+    <h1 id="cl">our classrooms</h1>
     <img src="img1.webp" alt="" width="200px" height="200px" />
     <img src="img1.webp" alt="" width="200px" height="200px" />
     <img src="img1.webp" alt="" width="200px" height="200px" />
 
-    <h1>our courses</h1>
+    <div style="background:lightcoral">
+
+
+    <h1 id="cr">our courses</h1>
     <table border="2" cellpadding="10">
       <tr>
         <th>content</th>
@@ -43,15 +54,18 @@
         <td>content</td>
       </tr>
     </table>
+        </div>
 
-    <h1>register</h1>
-    <form action="">
+        <div style="background: lightgreen;">
+
+    <h1 id="r">register</h1>
+    <form action="" method="post">
         <input type="number" min="5" max="10">
       <label for="name">enter ur name</label>
       <input type="text" id="name" name="uname" placeholder="enter ur name" disabled/>
 
       <h1>gender</h1>
-      <input type="radio" name="inp1" value="male" required />
+      <input type="radio" name="inp1" value="male"  />
       <label for="">male</label>
 
       <input type="radio" name="inp1" value="female" />
@@ -91,11 +105,30 @@
 
       min
       max
+
+      div tag -it is used to form a groupwise elements for applying styles
+      span tag- to form a group for a text
       
       -->
     </form>
 
-    <h1>contact us</h1>
+        </div>
+    <div>conten</div>
+    <div>conten</div>
+    <div>conten</div>
+    <div>conten</div>
+    <div>conten</div>
+
+    <header>c</header>
+    <nav>c</nav>
+    <section>c</section>
+    <section>c</section>
+    <section>c</section>
+    <aside>c</aside>
+    <footer>c</footer>
+
+
+    <h1 id="c">contact us</h1>
     <h1>
       <a href="mailto:teja@gmail.com">mail us</a> <br />
       <a href="tel:87379437983">call us</a><br />
