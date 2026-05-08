@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        how to insert css
+        inline 
+        internal
+        extenral
+
+        declaration
+        property:value
+
+        selectors
+        simple 
+        element selector
+
+        id selector 
+            denoted by #name
+            to uniquely apply styles
+
+        class selector
+          denoted by .
+          to style mutliple elements
+
+        
+        specificity
+        inline ---internal --external
+        id----class--element 
+
+
+        !important-used to improve the specificity
+          h1{
+            color:green !important;
+        
+        
+        }
+
+        how many ways we can insert colors
+        
+        h1{
+            /* color:rgba(232, 61, 23, 0.2); */
+            /* color:hsla(360,100,50)
+            color:#aa83fe
+
+            
+            universal selector
+            *{
+                color:green
+            }
+        grouping selector
+            #el1,div,p{
+                color:red;
+            }
+            
+            boxmodel
+            it is combination of four components
+            1) content
+              it includes width and height
+              width:100px
+              height:100px
+            2) padding
+            it is the space inside the element
+            padding:20px;
+            padding:10px 30px;
+            padding:10px 20px 30px;
+            padding:10px 20px 30px 40px;
+            3) border
+            border: 3px solid red;
+            border styles- solid, double,dotted,dashed,ridge,groove,none
+            4) margin
+            it is the space around an elements
+            
+            h1{
+        height:100px;
+        width:100px;
+            padding:10px 20px;
+            border: 3px groove red;
+            border-radius:5%;
+            margin:50px
+        }
+
+        
+        block level elements
+        are the elements which occupies total space and always starts on
+        new line
+
+        inline elements
+        are the elements which occupies necessary space and doesnt starts
+        on new line
+
+        
+           <h1>Lorem <span> ipsum dolor sit</span> amet consectetur, adipisicing elit. Delectus consectetur laudantium expedita molestias fugit laborum. Perferendis explicabo eveniet, iusto fuga, provident officiis sequi culpa corporis eos molestias, optio sunt sapiente.
+        </h1> <h1>content 2</h1>
+
+    <a href="">link1</a>
+    <a href="">link1</a>
+        inline elements doesnot take margin,height and width 
+
+        inline-block 
+        it behaves like inline elements but takes properteis like
+        block level
+        span{
+            color:red;
+            padding:20px;
+            margin:30px;
+            height:300px;
+            width:200px;
+            display:inline-block;
+            
+        }
+        */
+        div{
+            background-color:lightsalmon;
+            background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('https://static.vecteezy.com/system/resources/thumbnails/027/531/873/small/glossy-blue-orange-abstract-stripes-corporate-background-vector.jpg');
+            /* background-repeat:no-repeat; */
+            background-size:100% 100%;
+            height: 600px;
+            color:white;
+            background-attachment:fixed
+        
+        }
+
+    </style>
+</head>
+<body>
+     
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi est repudiandae numquam, ea, doloremque blanditiis assumenda exercitationem consequatur quis ducimus pariatur tempora adipisci non. Laudantium, doloremque? Dolorem debitis ipsa deserunt.
+    </div>
+
+   <div style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfC7NwSNjOgIGeVkgT_uHJiz3Fju1qxObDQ&s)">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quisquam commodi vero tenetur corrupti? Ex dolores accusamus corporis iusto, alias maxime quia ab obcaecati maiores rem soluta repellat numquam facere!
+   </div>
+
+
+</body>
+</html>

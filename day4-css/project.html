@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>CSS Concepts Project</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================
+       GLOBAL STYLES
+    ========================== */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background-color:#f1f5f9;
+      color:#1e293b;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav{
+      background-color:#0f172a;
+      padding:20px;
+      text-align:center;
+    }
+
+    /* INLINE vs INLINE-BLOCK */
+
+    nav a{
+      display:inline-block;
+      text-decoration:none;
+      color:white;
+      background-color:#2563eb;
+      padding:12px 20px;
+      margin:0 10px;
+      border-radius:8px;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      background-color:#1d4ed8;
+      transform:translateY(-2px);
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
+
+    .hero{
+
+      /* BACKGROUND IMAGE */
+
+      background-image:
+      linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+      ),
+      url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
+      background-size:cover;
+      background-position:center;
+
+      height:400px;
+
+      color:white;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:50px;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:20px;
+      width:70%;
+      line-height:1.8;
+    }
+
+    /* =========================
+       COLORS SECTION
+    ========================== */
+
+    .colors{
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    .colors h2{
+      margin-bottom:40px;
+      font-size:35px;
+    }
+
+    .color-box{
+      width:180px;
+      height:120px;
+
+      display:inline-block;
+
+      margin:15px;
+
+      line-height:120px;
+      color:white;
+      font-weight:bold;
+      border-radius:10px;
+      font-size:20px;
+    }
+
+    .red{
+      background-color:red;
+    }
+
+    .blue{
+      background-color:#2563eb;
+    }
+
+    .green{
+      background-color:rgb(34,197,94);
+    }
+
+    .purple{
+      background-color:hsl(270,70%,50%);
+    }
+
+    /* =========================
+       BOX MODEL SECTION
+    ========================== */
+
+    .box-model{
+      padding:60px 20px;
+      background-color:white;
+      text-align:center;
+    }
+
+    .box-model h2{
+      margin-bottom:40px;
+      font-size:35px;
+    }
+
+    .card{
+      width:300px;
+
+      display:inline-block;
+
+      margin:20px;
+
+      padding:25px;
+
+      border:4px solid #2563eb;
+
+      background-color:#e0f2fe;
+
+      border-radius:12px;
+
+      vertical-align:top;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .card p{
+      line-height:1.7;
+    }
+
+    /* =========================
+       FONT SECTION
+    ========================== */
+
+    .fonts{
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    .fonts h2{
+      margin-bottom:40px;
+      font-size:35px;
+    }
+
+    .light{
+      font-weight:300;
+      font-size:20px;
+      margin:15px;
+    }
+
+    .normal{
+      font-weight:400;
+      font-size:24px;
+      margin:15px;
+    }
+
+    .bold{
+      font-weight:700;
+      font-size:30px;
+      margin:15px;
+      letter-spacing:2px;
+    }
+
+    .spacing{
+      font-size:22px;
+      line-height:2;
+      width:70%;
+      margin:auto;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer{
+      background-color:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav>
+
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+
+  </nav>
+
+
+  
+
+  <section class="hero">
+
+    <h1>Learn CSS Through Projects</h1>
+
+    <p>
+      This project demonstrates CSS Colors,
+      Backgrounds, Inline & Inline-Block,
+      Box Model, and Fonts in one modern UI.
+    </p>
+
+  </section>
+
+
+
+  <section class="colors">
+
+    <h2>CSS Colors</h2>
+
+    <div class="color-box red">
+      Red
+    </div>
+
+    <div class="color-box blue">
+      HEX
+    </div>
+
+    <div class="color-box green">
+      RGB
+    </div>
+
+    <div class="color-box purple">
+      HSL
+    </div>
+
+  </section>
+
+  
+
+  <section class="box-model">
+
+    <h2>CSS Box Model</h2>
+
+    <div class="card">
+
+      <h3>Card One</h3>
+
+      <p>
+        This card demonstrates padding,
+        border, margin, width,
+        and background color.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Card Two</h3>
+
+      <p>
+        The space outside is margin,
+        inside space is padding,
+        and blue line is border.
+      </p>
+
+    </div>
+
+  </section>
+
+ 
+
+  <section class="fonts">
+
+    <h2>CSS Fonts</h2>
+
+    <p class="light">
+      Light Font Weight - 300
+    </p>
+
+    <p class="normal">
+      Normal Font Weight - 400
+    </p>
+
+    <p class="bold">
+      Bold Font Weight - 700
+    </p>
+
+    <p class="spacing">
+      This paragraph demonstrates line-height,
+      letter-spacing, font-size,
+      and font-family properties in CSS.
+    </p>
+
+  </section>
+
+  
+  <footer>
+
+    <p>
+      CSS Learning Project Template
+    </p>
+
+  </footer>
+
+</body>
+</html>
