@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+AR+Guides&display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+
+        /* 
+        colors
+        display -inline,block,inline block
+        backgrunds
+        box model- content, padding, border,margin
+
+
+        combinators -based on relation we can target html elements
+         
+        child selector
+        .s1>p{
+         
+         }
+
+         .s1>h1{
+         }
+
+         general sibling selector
+         
+        div~h1{
+            color:green;
+        }
+
+        hover and transition
+        it is used to add duration
+        to the properties
+
+        transition:all 2s;
+
+         
+ div{
+        background:blue;
+      }
+      div:hover{
+        background:yellow;
+        transition:all 1s;
+
+      }
+
+      p{
+        width:50px;
+        background:red;
+        padding:20px;
+        height:50px;
+
+      }
+      p:hover{
+        height:70px;
+        width:70px;
+        color:white;
+        transition:all 1s;
+
+      }
+
+      h2:hover{
+        transition:all 1s;
+        border:2px solid red;
+      }
+
+      transform properties
+      transform: scale(1.5)
+
+
+        
+      h2{
+        background:blue;
+    }
+    h2:hover{
+        transition:all 2s;
+        transform:scale(1.2);
+        transform:scale(0.5);
+        transform:rotate(-30deg);
+        transform:translate(-20px,-20px)
+    }
+
+    units
+    absolute units
+    inch ,cm ,mm ,px
+
+    relative units
+    % it always depends on parent
+    vh and vw ---viewport height and viewport width
+    rem -fontsizes
+
+     h1{
+        width:80vw;
+        background:blue;
+        height:200vh;
+    }
+    h1>div{
+        background:yellow;
+        width:70vw;
+        height:70%;
+    }
+
+
+    text properties
+
+    1) text-align:center
+                :left
+                :right
+
+    2) text-shodow: x y blurradius color;
+       text-shadow: 0px 0px 5px black;
+
+       box-shadow: x y blure offset color;
+       box-shadow: 1px 2px 5px 5px blue;
+    
+    3) text-spacing
+         line-height: 1.9;
+       word-spacing: 60px;
+       letter-spacing:20px;
+
+    fonts 
+    1) font-family: 
+
+    */
+   
+    h1{
+       text-shadow: 0px 0px 2px black;
+       box-shadow: 1px 2px 2px 5px blue;
+    }
+    p{
+       font-family:cursive;
+       font-size:1.3rem;
+       font-weight:900;
+       font-family: "Playwrite AR Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+
+
+    }
+    </style>
+    </head>
+<body>
+
+    <h1>
+        <div> <i class="fa-solid fa-house"></i>content</div>
+    </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet id perferendis non earum nemo odio consectetur odit ullam! Numquam tenetur harum at vitae laborum rerum porro beatae, adipisci ex?</p>
+    
+</body>
+</html>
