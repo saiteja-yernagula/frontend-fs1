@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        align-items: center;
+        background: black;
+        color: white;
+        display: flex;
+        padding: 2px 20px;
+        justify-content: space-between;
+      }
+
+      header > ul {
+        display: flex;
+        gap: 10px;
+      }
+      li {
+        list-style-type: none;
+      }
+
+      .s1 {
+        display: flex;
+        color: white;
+        background: black;
+        justify-content: space-between;
+        padding: 20px;
+        align-items:center;
+      }
+      .s1>div{
+        flex-basis:50%;
+      }
+      img{
+        width:100%;
+        height:100;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>leftside</div>
+      <ul>
+        <li>home</li>
+        <li>services</li>
+        <li>contact</li>
+      </ul>
+    </header>
+
+    <section class="s1">
+      <div >
+        <h1>Hi, I'm John Doe I build simple and clean websites.</h1>
+
+        <p>
+          I am a web development student who loves turning ideas into real,
+          working web pages.
+        </p>
+        <button>view projects</button>
+        <button>download cv</button>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+      </div>
+    </section>
+  </body>
+</html>

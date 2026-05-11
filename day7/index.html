@@ -29,9 +29,8 @@
         */
 
         section{
-            height:100vh;
-           display:flex;
-          gap:20px; 
+            /* height:100vh; */
+          /* gap:20px; 
           justify-content:center;
           justify-content:space-between;
           justify-content:space-around;
@@ -44,31 +43,42 @@
           align-content:center;
           align-content:space-between;
           flex-wrap:wrap;
-          flex-direction:row-reverse;
+          flex-direction:row-reverse; */
           /*  
            flex-flow: row wrap; */
+           display:flex;
+           gap:2px;
+
         }
         div{
             background:blue;
-            padding:20px;
-            width:100px;
+            /* padding:20px; */
+        
+            color:white;
         }
+        div{
+            flex-basis:20%;
+        }
+
+        .item3{
+            /* order:-1 */
+
+        }
+        .item2{
+            /* order:-2; */
+        }
+   
+
     </style>
 </head>
 <body>
 
     <section>
-        <div>content1</div>
-        <div>content2</div>
-        <div>content3</div>
-             <div>content1</div>
-        <div>content2</div>
-        <div>content3</div>
-        <div>content1</div>
-        <div>content2</div>
-        <div>content3</div>
+        <div class="item1" >content1</div>
+        <div class="item2">content2</div>
+        <div class="item3">content3</div>
+        <div class="item3">content3</div>
         
-        <div>content3</div>
     </section>
     
 </body>
