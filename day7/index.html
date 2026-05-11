@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        combinators
+        :hover
+        units
+        transition
+        transform
+
+
+        flex
+        media queries
+        positions
+
+
+        flex 
+        it is used to create one dimensional layout model
+        it is used in mostly cards,navbar and other layout sections
+
+        flex -container----parent properties
+
+        flex-items--child properties
+        
+        */
+
+        section{
+            height:100vh;
+           display:flex;
+          gap:20px; 
+          justify-content:center;
+          justify-content:space-between;
+          justify-content:space-around;
+          justify-content:space-evenly;
+          justify-content:flex-start;
+          justify-content:flex-end;
+          align-items:flex-end;
+          align-items:flex-start;
+          align-items:center;
+          align-content:center;
+          align-content:space-between;
+          flex-wrap:wrap;
+          flex-direction:row-reverse;
+          /*  
+           flex-flow: row wrap; */
+        }
+        div{
+            background:blue;
+            padding:20px;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div>content1</div>
+        <div>content2</div>
+        <div>content3</div>
+             <div>content1</div>
+        <div>content2</div>
+        <div>content3</div>
+        <div>content1</div>
+        <div>content2</div>
+        <div>content3</div>
+        
+        <div>content3</div>
+    </section>
+    
+</body>
+</html>

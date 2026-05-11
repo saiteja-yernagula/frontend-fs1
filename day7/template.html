@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0b0d14;
+      color:white;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    .container{
+      width:90%;
+      margin:auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar{
+      background:#0a0c12;
+      padding:18px 0;
+      border-bottom:1px solid #1f1f1f;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo-box{
+      width:45px;
+      height:45px;
+      background:#111827;
+      border:2px solid #36d11f;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#36d11f;
+      font-weight:bold;
+    }
+
+    .logo-text h2{
+      font-size:30px;
+    }
+
+    .logo-text p{
+      color:#bcbcbc;
+      font-size:14px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:35px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover,
+    .active{
+      color:#36d11f;
+      border-bottom:2px solid #36d11f;
+      padding-bottom:5px;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      padding:70px 0;
+    }
+
+    .hero-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:50px;
+    }
+
+    .hero-left{
+      flex:1;
+    }
+
+    .hero-left h1{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .hero-left h1 span{
+      color:#36d11f;
+    }
+
+    .hero-left h2{
+      font-size:38px;
+      margin-bottom:25px;
+    }
+
+    .hero-left p{
+      color:#b5b5b5;
+      line-height:1.8;
+      margin-bottom:35px;
+      width:90%;
+    }
+
+    .hero-btns{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border:2px solid #36d11f;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn-green{
+      background:#36d11f;
+      color:black;
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+    }
+
+    .hero-right{
+      flex:1;
+    }
+
+    .hero-image{
+      padding:12px;
+    }
+
+    /* ================= SECTION TITLE ================= */
+
+    .section-title{
+      text-align:center;
+      font-size:38px;
+      margin-bottom:50px;
+      position:relative;
+    }
+
+    .section-title::after{
+      content:"";
+      width:70px;
+      height:4px;
+      background:#36d11f;
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:-12px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services{
+      padding:70px 0;
+    }
+
+    .service-wrapper{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .service-card{
+      background:#11131b;
+      border:1px solid #262626;
+      padding:35px 20px;
+      text-align:center;
+      flex:1 1 180px;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-8px);
+      border-color:#36d11f;
+    }
+
+    .service-card i{
+      font-size:45px;
+      color:#36d11f;
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .service-card p{
+      color:#c0c0c0;
+      line-height:1.7;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects{
+      padding:70px 0;
+    }
+
+    .project-wrapper{
+      display:flex;
+      gap:25px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .project-card{
+      background:#11131b;
+      border:1px solid #262626;
+      flex:1 1 300px;
+      padding:15px;
+    }
+
+    .project-card h3{
+      margin:18px 0 10px;
+      font-size:28px;
+    }
+
+    .project-card p{
+      color:#bcbcbc;
+      line-height:1.7;
+      margin-bottom:25px;
+    }
+
+    .project-btn{
+      display:inline-block;
+      border:1px solid #36d11f;
+      padding:12px 22px;
+      color:#36d11f;
+      transition:0.3s;
+    }
+
+    .project-btn:hover{
+      background:#36d11f;
+      color:black;
+    }
+
+    /* ================= EDUCATION ================= */
+
+    .education{
+      padding:70px 0;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+    }
+
+    th{
+      background:#36d11f;
+      padding:18px;
+      color:white;
+      font-size:18px;
+    }
+
+    td{
+      padding:18px;
+      border:1px solid #2d2d2d;
+      text-align:center;
+      background:#11131b;
+    }
+
+    /* ================= ACHIEVEMENT CONTACT ================= */
+
+    .bottom-section{
+      padding:70px 0;
+    }
+
+    .bottom-wrapper{
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .achievement,
+    .contact{
+      flex:1;
+      min-width:300px;
+    }
+
+    .achievement h2,
+    .contact h2,
+    .declaration h2{
+      margin-bottom:25px;
+      font-size:35px;
+      position:relative;
+    }
+
+    .achievement h2::after,
+    .contact h2::after,
+    .declaration h2::after{
+      content:"";
+      width:70px;
+      height:4px;
+      background:#36d11f;
+      position:absolute;
+      left:0;
+      bottom:-10px;
+    }
+
+    .achievement ul{
+      list-style:none;
+    }
+
+    .achievement li{
+      margin-bottom:20px;
+      font-size:18px;
+      color:#d3d3d3;
+    }
+
+    .achievement i{
+      color:#36d11f;
+      margin-right:10px;
+    }
+
+    .contact p{
+      margin-bottom:20px;
+      color:#d3d3d3;
+      font-size:18px;
+    }
+
+    .contact i{
+      color:#36d11f;
+      margin-right:12px;
+    }
+
+    /* ================= DECLARATION ================= */
+
+    .declaration{
+      padding-bottom:70px;
+    }
+
+    .declare-box{
+      border:1px solid #2c2c2c;
+      padding:35px;
+      margin-top:30px;
+      background:#11131b;
+    }
+
+    .declare-box p{
+      color:#c7c7c7;
+      line-height:1.8;
+      margin-bottom:25px;
+      font-size:18px;
+    }
+
+    .signature{
+      text-align:right;
+      color:#36d11f;
+      font-size:28px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      border-top:1px solid #1f1f1f;
+      padding:25px 0;
+    }
+
+    .footer-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:20px;
+    }
+
+    .social-icons i{
+      font-size:24px;
+      transition:0.3s;
+    }
+
+    .social-icons i:hover{
+      color:#36d11f;
+    }
+
+    /* ================= MEDIA QUERIES ================= */
+
+    @media(max-width:992px){
+
+      .hero-wrapper{
+        flex-direction:column;
+      }
+
+      .hero-left h1{
+        font-size:42px;
+      }
+
+      .hero-left h2{
+        font-size:30px;
+      }
+
+      .nav-wrapper{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .section-title{
+        font-size:30px;
+      }
+
+      .hero-left{
+        text-align:center;
+      }
+
+      .hero-left p{
+        width:100%;
+      }
+
+      .hero-btns{
+        justify-content:center;
+      }
+
+      .logo-text h2{
+        font-size:24px;
+      }
+
+      table{
+        display:block;
+        overflow-x:auto;
+      }
+
+    }
+
+    @media(max-width:500px){
+
+      .hero-left h1{
+        font-size:34px;
+      }
+
+      .hero-left h2{
+        font-size:24px;
+      }
+
+      .service-card,
+      .project-card{
+        flex:1 1 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+    <div class="container nav-wrapper">
+
+      <div class="logo">
+        <div class="logo-box">JD</div>
+
+        <div class="logo-text">
+          <h2>John Doe</h2>
+          <p>Web Developer | Student</p>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active">About</a></li>
+        <li><a href="#">Achievements</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-wrapper">
+
+      <div class="hero-left">
+        <h1>Hi, I'm <span>John Doe</span></h1>
+        <h2>I build simple and clean websites.</h2>
+
+        <p>
+          I am a web development student who loves turning ideas into
+          real, working web pages.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#" class="btn btn-green">View Projects</a>
+          <a href="#" class="btn">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services">
+    <div class="container">
+
+      <h2 class="section-title">What I Do</h2>
+
+      <div class="service-wrapper">
+
+        <div class="service-card">
+          <i class="fa-solid fa-desktop"></i>
+          <h3>Web Design</h3>
+          <p>Design clean and attractive websites that provide great user experience.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Development</h3>
+          <p>Build responsive and functional websites using modern technologies.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-palette"></i>
+          <h3>UI/UX Design</h3>
+          <p>Create simple and user-friendly designs that look great on all devices.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>SEO & Analytics</h3>
+          <p>Improve website visibility and track performance with smart strategies.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>Performance</h3>
+          <p>Optimize website for speed and ensure smooth performance.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Support</h3>
+          <p>Provide support and maintenance to keep websites running smoothly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="projects">
+    <div class="container">
+
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="project-wrapper">
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop" alt="">
+
+          <h3>Portfolio Website</h3>
+
+          <p>
+            A personal portfolio website built using HTML to showcase my skills and projects.
+          </p>
+
+          <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="">
+
+          <h3>Student Registration Form</h3>
+
+          <p>
+            A simple registration form created using HTML form elements.
+          </p>
+
+          <a href="#" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?q=80&w=1200&auto=format&fit=crop" alt="">
+
+          <h3>Simple Calculator</h3>
+
+          <p>
+            A basic calculator built using HTML, CSS and JavaScript.
+          </p>
+
+          <a href="#" class="project-btn">View Project</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section class="education">
+    <div class="container">
+
+      <h2 class="section-title">Education</h2>
+
+      <table>
+        <tr>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>Location</th>
+        </tr>
+
+        <tr>
+          <td>High School</td>
+          <td>XYZ High School</td>
+          <td>2018 - 2020</td>
+          <td>New York, USA</td>
+        </tr>
+
+        <tr>
+          <td>Bachelor Of Computer Science</td>
+          <td>XYZ University</td>
+          <td>2022 - 2026</td>
+          <td>New York, USA</td>
+        </tr>
+
+      </table>
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS + CONTACT -->
+
+  <section class="bottom-section">
+    <div class="container bottom-wrapper">
+
+      <div class="achievement">
+
+        <h2>Achievements</h2>
+
+        <ul>
+          <li><i class="fa-solid fa-circle-check"></i> Completed HTML & CSS fundamentals course.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Built multiple small projects using HTML.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Consistently learning and improving every day.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Practicing problem solving and logical thinking.</li>
+        </ul>
+
+      </div>
+
+      <div class="contact">
+
+        <h2>Contact</h2>
+
+        <p><i class="fa-regular fa-envelope"></i> Email: johndoe@example.com</p>
+        <p><i class="fa-solid fa-phone"></i> Phone: +123 456 7890</p>
+        <p><i class="fa-solid fa-globe"></i> Website: www.johndoe.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Location: New York, USA</p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DECLARATION -->
+
+  <section class="declaration">
+    <div class="container">
+
+      <h2>Declaration</h2>
+
+      <div class="declare-box">
+
+        <p>
+          I hereby declare that all the information provided above is true
+          and correct to the best of my knowledge.
+        </p>
+
+        <h3 class="signature">John Doe</h3>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-wrapper">
+
+      <p>© 2024 John Doe. All rights reserved.</p>
+
+      <div class="social-icons">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
