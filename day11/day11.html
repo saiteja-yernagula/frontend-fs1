@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>students marks management system</h1>
+    <div id="container"></div>
+    <script>
+        /*
+        loops
+        for 
+        for(intilization;condition;updation){
+        }
+
+        for(i=5;i<=10;i++){
+        console.log(i);
+        }
+        while
+        initilization
+        while(condition){
+        
+        updation
+        }
+
+        var i=0
+        while(i<=10){
+        console.log(i)
+        i++
+        }
+
+        do while loop
+        for in
+        for of
+
+        functions
+        scopes
+
+        
+        
+        for(i=5;i<=10;i++){
+        console.log(i);
+        }
+
+        while(true){
+            input=prompt('enter ur menu items')
+            if(input=='done'){
+                break
+            }
+        }
+        
+        let str='hello'
+        let arr=['html','css','js']
+        let obj={name:'john',age:25}
+        for (i in obj){
+            console.log(i);
+        }
+
+        for  (i of arr){
+            console.log(i)
+        }
+
+        functions
+        it is a block of reusable code that is used to
+        perform a specific task when something invokes it
+       
+        function funname(parameters){
+        //block of code
+        }
+        funname(arguments)
+
+
+        points
+        function name sstores fun value
+        sum()---execute
+        console.log(sum)----function definiton
+        console.log(sum())----execute + return value
+
+
+        function sum(a,b){
+            console.log(a+b)
+        return 'hello'
+        console.log('hi')
+       }
+       console.log(sum)
+       sum(1,2)
+       console.log(sum(2,3))
+
+       clousure is when an inner function having a access to
+       the varaible which is declared in outer function and
+       can able to change even after the execution of outer
+       function
+       function parent(){
+        let count=0
+        console.log('parent')
+        return function(){
+            count++
+            console.log('child');
+            console.log(count);
+        }
+    }
+      let a=parent()
+      a()//1
+      a()//2
+      
+
+      scopes
+      accessibility of an variable
+
+
+      global scope 
+    -var and let and const
+   var a=1
+    let b=2
+    const c=3
+    console.log(a,b,c)
+    
+    block scope- let and const 
+     {
+            var a=1
+    let b=2
+    const c=3
+    console.log(a,b,c)
+
+    }
+    console.log(a)
+    console.log(b)\
+
+    local scope
+    function funname(){
+              var a=1
+    let b=2
+    const c=3
+    }
+    funname()
+    console.log(a,b,c)//cannot accesss outside of an funciton
+
+
+      */ 
+
+      var students = [
+   {
+       name: "Rahul",
+       marks: 90
+   },
+   {
+       name: "Teja",
+       marks: 70
+   },
+   {
+       name: "Kiran",
+       marks: 30
+   }
+];
+let output=''
+for (i of students){
+    let grade=''
+    if(i.marks>75){
+      grade="A" }else if(i.marks>35){
+        grade="B"
+    }else{
+        grade="C" }
+    output+=`<h1>name:${i.name}</h1>
+    <p>marks : ${i.marks}</p>
+    <h3>grade: ${grade}</h3>`
+  
+    document.getElementById('container').innerHTML=output
+}
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
