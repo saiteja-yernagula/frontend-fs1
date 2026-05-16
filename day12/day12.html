@@ -110,19 +110,19 @@
             <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="">
             <h3>Nike shoes</h3>
             <p>2000</p>
-            <button>Add to cart</button>
+            <button onClick="addtocart('Nike shoes',2000)">Add to cart</button>
         </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="">
             <h3>Smart watch</h3>
             <p>1500</p>
-            <button>Add to cart</button>
+            <button onClick="addtocart('Smart watch',1500)">Add to cart</button>
         </div>
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="">
             <h3>Headphones</h3>
             <p>1200</p>
-            <button>Add to cart</button>
+            <button onClick="addtocart('Headphones',1200)">Add to cart</button>
         </div>
     </div>
     
@@ -131,8 +131,44 @@
         <h3>Cart Detail</h3>
         <div class="cart-items" id="cartContainer"></div>
         <div id="total">
-            Total 0
+            Total <span id="totalvalue">0</span>
         </div>
     </div>
+
+    <script>
+        let cart=[]
+        let total=0
+        let count=0
+        function addtocart(name,price){
+            let product={
+                name,
+                price
+            }
+            cart.push(product)
+            count++
+            total+=price
+            
+
+            let cartCount=document.getElementById('cartCount')
+            cartCount.innerHTML=count
+
+            let totalvalue=document.getElementById('totalvalue')
+            totalvalue.innerHTML=total
+
+            document.getElementById('cartContainer').innerHTML=''
+            for (i of cart){
+                let cartContainer=document.getElementById('cartContainer')
+                cartContainer.innerHTML+=`
+                <div class='cart-item'>
+                    <h3>${i.name}</h3>
+                    <p>${i.price}</p>
+                    </div>
+                `
+            }
+
+
+        }
+      
+    </script>
 </body>        
 </html>
