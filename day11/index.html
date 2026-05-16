@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+      }
+
+      body {
+        background: #f4f4f4;
+        padding: 30px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .cart-title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      #cartCount {
+        color: red;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        background: white;
+        width: 250px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .card h2 {
+        margin: 10px 0;
+      }
+
+      .card p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: green;
+      }
+
+      button {
+        padding: 10px 15px;
+        border: none;
+        background: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background: #333;
+      }
+
+      .cart-section {
+        margin-top: 40px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      #total {
+        margin-top: 20px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mini shopping cart</h1>
+    <h2 class="cart-title">
+      cart items
+      <span id="cartCount">0</span>
+    </h2>
+       <div class="container">
+
+       <!-- PRODUCT 1 -->
+
+       <div class="card">
+
+           <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Shoes">
+
+           <h2>Nike Shoes</h2>
+
+           <p>₹2000</p>
+
+           <button onclick="addToCart('Nike Shoes',2000)">
+               Add To Cart
+           </button>
+
+       </div>
+
+       <!-- PRODUCT 2 -->
+
+       <div class="card">
+
+           <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Watch">
+
+           <h2>Smart Watch</h2>
+
+           <p>₹1500</p>
+
+           <button onclick="addToCart('Smart Watch',1500)">
+               Add To Cart
+           </button>
+
+       </div>
+
+       <!-- PRODUCT 3 -->
+
+       <div class="card">
+
+           <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+
+           <h2>Headphones</h2>
+
+           <p>₹1200</p>
+
+           <button onclick="addToCart('Headphones',1200)">
+               Add To Cart
+           </button>
+
+       </div>
+
+   </div>
+
+
+    <div class="cart-section">
+      <h2>Cart Details</h2>
+
+      <div id="cartItems"></div>
+
+      <h2 id="total">Total: ₹0</h2>
+    </div>
+
+    <script>
+      var total = 0;
+      var count = 0;
+      var cart = [];
+      function addToCart(name, price) {
+        var product = {
+          name,
+          price,
+        };
+        cart.push(product);
+        console.log(cart);
+        count++;
+        document.getElementById("cartCount").innerHTML = count;
+
+        document.getElementById("cartItems").innerHTML = "";
+
+        total += Number(price);
+        document.getElementById("total").innerHTML = total;
+        // cartData.innerHTML = "";
+        displaycart(cart);
+      }
+
+      let cartData = "";
+      function displaycart(items) {
+        for (i of items) {
+          cartData = `
+
+           <div class="cart-item">
+
+               <h3>${i.name}</h3>
+
+               <h3>₹${i.price}</h3>
+
+           </div>
+       `;
+
+          document.getElementById("cartItems").innerHTML += cartData;
+        }
+      }
+    </script>
+  </body>
+</html>
